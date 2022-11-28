@@ -1,6 +1,6 @@
 package Lv1.programmers;
 
-import Lv1.programmers.Q12944.Tuna;
+import Lv1.programmers.Q12944.Hyejin;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +17,7 @@ class Q12944Test {
         output.add(2.5);
         output.add(5.0);
 
-        var algorithm = new Tuna();
+        var algorithm = new Hyejin();
 
         for(int i = 0; i < input.size(); i++) {
             Assertions.assertEquals(algorithm.solution(input.get(i)), output.get(i));
