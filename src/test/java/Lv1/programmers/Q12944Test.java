@@ -1,6 +1,6 @@
 package Lv1.programmers;
 
-import Lv1.programmers.Q12944.Tuna;
+import Lv1.programmers.Q12944.Hyejin;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
