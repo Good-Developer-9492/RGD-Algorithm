@@ -1,29 +1,27 @@
 package Lv1.programmers.Q12928;
 
-import org.junit.jupiter.api.Assertions;
+import java.util.List;
 
-import java.util.ArrayList;
+import static java.util.Arrays.asList;
 
 public class Q12928Test {
+    public static List<Integer> input() {
+        return asList(
+            12,
+            5,
+            1,
+            0,
+            16
+        );
+    }
 
-    void test(Q12928 algorithm) {
-        var input = new ArrayList<Integer>();
-        input.add(12);
-        input.add(5);
-        input.add(1);
-        input.add(0);
-        input.add(16);
-
-        var output = new ArrayList<Integer>();
-        output.add(28);
-        output.add(6);
-        output.add(1);
-        output.add(0);
-        output.add(31);
-
-        for (int i = 0; i < input.size(); i++) {
-            Assertions.assertEquals(output.get(i),algorithm.solution(input.get(i)));
-        }
-
+    public static List<Integer> output() {
+        return asList(
+            28,
+            6,
+            1,
+            0,
+            31
+        );
     }
 }

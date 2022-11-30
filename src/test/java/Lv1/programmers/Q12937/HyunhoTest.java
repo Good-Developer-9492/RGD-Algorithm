@@ -1,12 +1,11 @@
-package Lv1.programmers;
+package Lv1.programmers.Q12937;
 
-import Lv1.programmers.Q12937.Hyunho;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-class Q12937Test {
+class HyunhoTest {
     @Test
     void test() {
         var input = new ArrayList<Integer>();
