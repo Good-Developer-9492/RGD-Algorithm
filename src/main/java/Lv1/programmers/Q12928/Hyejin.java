@@ -2,7 +2,8 @@ package Lv1.programmers.Q12928;
 
 import java.util.*;
 
-public class Hyejin implements Q12928 {
+public class Hyejin {
+    // 1ms, 75MB
     public int solution(int n) {
         Set<Integer> set = new HashSet<>();
         int goal = n;
