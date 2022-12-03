@@ -8,8 +8,8 @@ class TunaTest {
 
     @Test
     void solution() {
-        var input = Q12932.input();
-        var output = Q12932.output();
+        var input = Q12932Test.input();
+        var output = Q12932Test.output();
 
         var algorithm = new Tuna();
 

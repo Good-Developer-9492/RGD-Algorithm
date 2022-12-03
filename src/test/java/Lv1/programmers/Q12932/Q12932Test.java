@@ -4,7 +4,7 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class Q12932 {
+public class Q12932Test {
     public static List<Long> input() {
         return asList(
             12345L,
