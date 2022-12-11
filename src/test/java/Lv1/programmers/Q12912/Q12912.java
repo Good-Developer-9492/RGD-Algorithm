@@ -21,11 +21,11 @@ public class Q12912 {
         );
     }
 
-    public static List<Integer> output() {
+    public static List<Long> output() {
         return asList(
-            12,
-            3,
-            12
+            12L,
+            3L,
+            12L
         );
     }
 }
