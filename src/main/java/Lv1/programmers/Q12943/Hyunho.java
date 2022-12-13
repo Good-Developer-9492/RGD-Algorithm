@@ -1,4 +1,4 @@
-package Lv1.programmers.Q12843;
+package Lv1.programmers.Q12943;
 
 public class Hyunho {
     //0.04ms, 69.7MB

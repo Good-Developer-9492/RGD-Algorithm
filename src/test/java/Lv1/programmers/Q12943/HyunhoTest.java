@@ -1,6 +1,5 @@
-package Lv1.programmers.Q12843;
+package Lv1.programmers.Q12943;
 
-import Lv1.programmers.Q12943.Q12943;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
