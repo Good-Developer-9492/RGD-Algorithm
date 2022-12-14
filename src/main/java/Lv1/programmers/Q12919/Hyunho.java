@@ -10,6 +10,7 @@ public class Hyunho {
             if (seoul[i].equals("Kim")){
                 sb.append(i);
                 sb.append("에 있다");
+                break;
             }
         }
 
