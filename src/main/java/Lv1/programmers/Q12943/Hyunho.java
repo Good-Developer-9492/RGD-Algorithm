@@ -4,13 +4,14 @@ public class Hyunho {
     //0.04ms, 69.7MB
     public int solution(int num) {
         int answer = 0;
+        long tempNum = (long) num;
 
-        while (num != 1) {
-            if (num % 2 == 0) {
-                num = num / 2;
-            } else if (num % 2 == 1){
-                num *= 3;
-                num += 1;
+        while (tempNum != 1) {
+            if (tempNum % 2 == 0) {
+                tempNum = tempNum / 2;
+            } else if (tempNum % 2 == 1){
+                tempNum *= 3;
+                tempNum += 1;
             }
             answer++;
             if (answer > 500) {
