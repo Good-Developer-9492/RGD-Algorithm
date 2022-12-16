@@ -5,11 +5,11 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 public class Q12910 {
-    public static List<Integer[]> input1() {
+    public static List<int[]> input1() {
         return asList(
-            new Integer[]{5, 9, 7, 10},
-            new Integer[]{2, 36, 1, 3},
-            new Integer[]{3, 2, 6}
+            new int[]{5, 9, 7, 10},
+            new int[]{2, 36, 1, 3},
+            new int[]{3, 2, 6}
         );
     }
 
@@ -21,11 +21,11 @@ public class Q12910 {
         );
     }
 
-    public static List<Integer[]> output() {
+    public static List<int[]> output() {
         return asList(
-            new Integer[]{5, 10},
-            new Integer[]{1, 2, 3, 36},
-            new Integer[]{-1}
+            new int[]{5, 10},
+            new int[]{1, 2, 3, 36},
+            new int[]{-1}
         );
     }
 }
