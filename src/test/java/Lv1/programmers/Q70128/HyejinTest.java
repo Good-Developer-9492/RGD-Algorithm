@@ -15,7 +15,7 @@ class HyejinTest {
         var algorithm = new Hyejin();
 
         for (int i = 0; i < input1.size(); i++) {
-            assertEquals(algorithm.solution(input1.get(i), input2.), output.get(i));
+            assertEquals(algorithm.solution(input1.get(i),input2.get(i)), output.get(i));
         }
 
     }
