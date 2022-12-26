@@ -1,6 +1,5 @@
 package Lv1.programmers.Q12917;
 
-import Lv1.programmers.Q12912.Q12917;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
