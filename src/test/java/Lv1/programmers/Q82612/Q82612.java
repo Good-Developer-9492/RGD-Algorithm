@@ -33,7 +33,7 @@ public class Q82612 {
         return asList(
                 10L,
                 0L,
-                6809375000L
+                6815625000L
         );
     }
 }
