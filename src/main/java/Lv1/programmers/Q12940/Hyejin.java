@@ -1,6 +1,7 @@
 package Lv1.programmers.Q12940;
 
 public class Hyejin {
+    //0.03ms, 70.8MB
     public int[] solution(int n, int m) {
         int a = Math.max(n, m);
         int b = Math.min(n, m);
