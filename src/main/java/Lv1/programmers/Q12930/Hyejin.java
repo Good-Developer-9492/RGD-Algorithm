@@ -3,6 +3,7 @@ package Lv1.programmers.Q12930;
 import java.util.Locale;
 
 public class Hyejin {
+//    0.04ms, 74.3MB
     public String solution(String s) {
 
         StringBuilder sb = new StringBuilder();
