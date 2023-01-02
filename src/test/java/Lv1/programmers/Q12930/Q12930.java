@@ -7,13 +7,15 @@ import static java.util.Arrays.asList;
 public class Q12930 {
     public static List<String> input() {
         return asList(
-            "try hello world"
+                "try hello world",
+                "  abc de  fghi   "
         );
     }
 
     public static List<String> output() {
         return asList(
-            "TrY HeLlO WoRlD"
+                "TrY HeLlO WoRlD",
+                "  AbC De  FgHi   "
         );
     }
 }
