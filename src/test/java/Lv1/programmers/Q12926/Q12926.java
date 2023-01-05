@@ -9,7 +9,9 @@ public class Q12926 {
         return asList(
             "AB",
             "z",
-            "a B z"
+            "a B z",
+            "   ",
+            "ZZZ"
         );
     }
 
@@ -17,7 +19,9 @@ public class Q12926 {
         return asList(
             1,
             1,
-            4
+            4,
+            1,
+            2
         );
     }
 
@@ -25,7 +29,9 @@ public class Q12926 {
         return asList(
             "BC",
             "a",
-            "e F d"
+            "e F d",
+            "   ",
+            "BBB"
         );
     }
 }
