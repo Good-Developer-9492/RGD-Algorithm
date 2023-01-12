@@ -29,26 +29,16 @@ public class Tuna {
 
     private String convert(String s) {
         return switch (s) {
-            case "one":
-                yield "1";
-            case "two":
-                yield "2";
-            case "three":
-                yield "3";
-            case "four":
-                yield "4";
-            case "five":
-                yield "5";
-            case "six":
-                yield "6";
-            case "seven":
-                yield "7";
-            case "eight":
-                yield "8";
-            case "nine":
-                yield "9";
-            default:
-                yield "0";
+            case "one" -> "1";
+            case "two" -> "2";
+            case "three" -> "3";
+            case "four" -> "4";
+            case "five" -> "5";
+            case "six" -> "6";
+            case "seven" -> "7";
+            case "eight" -> "8";
+            case "nine" -> "9";
+            default -> "0";
         };
     }
 }
