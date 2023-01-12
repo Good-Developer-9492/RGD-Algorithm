@@ -28,39 +28,16 @@ public class Tuna {
     }
 
     private String convert(String s) {
-        String converted = "0";
-        switch (s) {
-            case "one":
-                converted = "1";
-                break;
-            case "two":
-                converted = "2";
-                break;
-            case "three":
-                converted = "3";
-                break;
-            case "four":
-                converted = "4";
-                break;
-            case "five":
-                converted = "5";
-                break;
-            case "six":
-                converted = "6";
-                break;
-            case "seven":
-                converted = "7";
-                break;
-            case "eight":
-                converted = "8";
-                break;
-            case "nine":
-                converted = "9";
-                break;
-            default:
-                converted = "0";
+        return switch (s) {
+            case "one" -> "1";
+            case "two" -> "2";
+            case "three" -> "3";
+            case "four" -> "4";
+            case "five" -> "5";
+            case "six" -> "6";
+            case "seven" -> "7";
+            case "eight" -> "8";
+            case "nine" -> "9";
         };
-
-        return converted;
     }
 }
