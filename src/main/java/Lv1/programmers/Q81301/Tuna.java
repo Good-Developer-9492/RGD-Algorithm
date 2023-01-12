@@ -38,6 +38,7 @@ public class Tuna {
             case "seven" -> "7";
             case "eight" -> "8";
             case "nine" -> "9";
+            default -> "0";
         };
     }
 }
