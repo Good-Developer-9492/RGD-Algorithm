@@ -1,6 +1,7 @@
 package Lv1.programmers.Q142086;
 
 public class Tuna {
+    // (1ms, 75MB)
     public int[] solution(String s) {
         String[] arr = s.split("");
         int[] answer = new int[arr.length];
