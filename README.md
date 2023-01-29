@@ -21,10 +21,10 @@ Real Good Developer's Algorithm Study Repo
     * 테스트 실패할 경우
       * `Execution failed for task ':test'. > No tests found for given includes`
         * IntelliJ 설정에서 Build -> Build Tools -> Gradle의 Build and Run 설정을 Gradle에서 IntelliJ로 수정
-      * `Java Version 17 Error`
-        * 초기 프로젝트 자바버전을 17로 지정해서 생긴 문제로 추정
-        * IntelliJ 설정의 Build -> Compiler -> Java Compiler의 project bytecode version을 11로 수정
+      * `Java Version 17`
+        * IntelliJ 설정의 Build -> Compiler -> Java Compiler의 project bytecode version을 17로 변경
 * 1일 1문제 풀이 후 PR 진행
+      * `Java Version 17`
   * 패키지명은 문제번호, 파일명은 이름
   * Branch명은 이름/문제번호
   * 문제번호는 문제 사이트의 URL Path중 가장 마지막 숫자

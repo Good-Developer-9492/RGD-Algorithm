@@ -1,17 +1,11 @@
-package Lv1.programmers.Q12682;
+package Lv1.programmers.Q17682;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class Q12682 {
-    public static List<Integer> input1() {
-        return asList(
-            1, 2, 3, 4, 5, 6, 7
-        );
-    }
-
-    public static List<String> input2() {
+public class Q17682 {
+    public static List<String> input() {
         return asList(
             "1S2D*3T",
             "1D2S#10S",
