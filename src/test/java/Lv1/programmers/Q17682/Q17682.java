@@ -5,6 +5,7 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 public class Q17682 {
+
     public static List<String> input() {
         return asList(
             "1S2D*3T",
