@@ -19,6 +19,12 @@ public class Q64061 {
                 {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0}
+            },
+            new int[][]{
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 4, 4, 0},
+                {1, 2, 2, 1}
             }
         );
     }
@@ -26,14 +32,16 @@ public class Q64061 {
     public static List<int[]> input2() {
         return asList(
             new int[]{1, 5, 3, 5, 1, 2, 1, 4},
-            new int[]{1, 2, 3, 4}
+            new int[]{1, 2, 3, 4},
+            new int[]{2, 3, 1, 4, 2, 3}
         );
     }
 
     public static List<Integer> output() {
         return asList(
             4,
-            0
+            0,
+            6
         );
     }
 }
