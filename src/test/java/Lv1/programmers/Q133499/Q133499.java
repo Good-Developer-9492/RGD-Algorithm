@@ -8,13 +8,15 @@ public class Q133499 {
     public static List<String[]> input() {
         return asList(
             new String[]{"aya", "yee", "u", "maa"},
-            new String[]{"ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"}
+            new String[]{"ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"},
+            new String[] {"wooyemawooye","ayayewooma","myea"}
         );
     }
 
     public static List<Integer> output() {
         return asList(
             1,
+            2,
             2
         );
     }
