@@ -82,7 +82,7 @@ public class Hyunho {
 
         @Override
         public String transformation(String str) {
-            String match = "[^0-9a-zA-Z._\\-]";
+            String match = "[^0-9a-z._-]";
             return super.transformation(str)
                 .replaceAll(match, "");
         }
