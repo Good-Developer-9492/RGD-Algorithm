@@ -10,8 +10,11 @@ public class Hyejin {
         //1194.93ms, 162MB
 
         int[] answer = new int[id_list.length];
+        //신고당한 유저
         Map<String, Integer> reportedUsers = new HashMap<>();
+        //신고한 유저
         Map<String, List<String>> notedUsers = new HashMap<>();
+        //차단된 유저
         Set<String> blockedUsers = new HashSet<>();
 
         //notedUser 초기화
