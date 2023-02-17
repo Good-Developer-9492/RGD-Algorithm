@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 public class Hyejin {
     public int[] solution(String[] id_list, String[] report, int k) {
+        //5.28ms, 72.8MB
+        //1194.93ms, 162MB
+
         int[] answer = new int[id_list.length];
         Map<String, Integer> reportedUsers = new HashMap<>();
         Map<String, List<String>> notedUsers = new HashMap<>();
