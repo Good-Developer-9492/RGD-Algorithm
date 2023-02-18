@@ -9,6 +9,9 @@ import java.util.Map;
 
 public class Hyejin {
     public int[] solution(String today, String[] terms, String[] privacies) {
+        //7.75ms, 77MB
+        //21.01ms, 85.3MB
+
         List<Integer> list = new ArrayList<>();
         //2022.05.19
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd");
