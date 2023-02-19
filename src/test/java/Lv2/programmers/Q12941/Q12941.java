@@ -1,4 +1,4 @@
-package Lv1.programmers.Q12941;
+package Lv2.programmers.Q12941;
 
 import java.util.List;
 
