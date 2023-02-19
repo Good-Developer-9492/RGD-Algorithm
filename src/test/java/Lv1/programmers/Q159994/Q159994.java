@@ -30,7 +30,7 @@ public class Q159994 {
     public static List<String> output() {
         return asList(
             "Yes",
-            "NO"
+            "No"
         );
     }
 }
