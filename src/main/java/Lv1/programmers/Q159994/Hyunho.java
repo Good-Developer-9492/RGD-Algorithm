@@ -1,4 +1,4 @@
-package Lv2.programmers.Q159994;
+package Lv1.programmers.Q159994;
 
 import java.util.Arrays;
 import java.util.LinkedList;
