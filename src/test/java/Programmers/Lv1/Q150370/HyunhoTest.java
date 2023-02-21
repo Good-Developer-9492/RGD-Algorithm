@@ -1,6 +1,5 @@
-package Lv1.programmers.Q150370;
+package Programmers.Lv1.Q150370;
 
-import Programmers.Lv1.Q150370.Hyunho;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
