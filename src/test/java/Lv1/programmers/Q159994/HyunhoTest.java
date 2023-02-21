@@ -1,5 +1,6 @@
 package Lv1.programmers.Q159994;
 
+import Programmers.Lv1.Q159994.Hyunho;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
