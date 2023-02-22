@@ -1,4 +1,4 @@
-package Lv1.programmers.Q159994;
+package Programmers.Lv1.Q159994;
 
 public class Hyejin {
     //0.01ms, 76.2MB
