@@ -3,7 +3,7 @@ package Programmers.Lv2.Q12973;
 import java.util.Stack;
 
 public class Tuna {
-    // (0.17ms ~ 68.21ms / 58.1MB ~ 85MB)
+    // (0.17ms ~ 68.21ms / 58.1MB ~ 85MB) ㅎ
     public int solution(String s) {
         Stack<Character> stack = new Stack<>();
 
