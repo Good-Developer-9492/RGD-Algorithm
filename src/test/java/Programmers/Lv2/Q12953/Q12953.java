@@ -8,14 +8,16 @@ public class Q12953 {
     public static List<int[]> input() {
         return asList(
             new int[]{2, 6, 8, 14},
-            new int[]{1, 2, 3}
+            new int[]{1, 2, 3},
+            new int[]{3, 4, 9, 16}
         );
     }
 
     public static List<Integer> output() {
         return asList(
             168,
-            6
+            6,
+            144
         );
     }
 }
