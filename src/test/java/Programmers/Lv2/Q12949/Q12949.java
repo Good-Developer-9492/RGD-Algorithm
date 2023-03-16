@@ -5,7 +5,7 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 public class Q12949 {
-    public static List<int[][]> input() {
+    public static List<int[][]> input1() {
         return asList(
             new int[][]{{1, 4}, {3, 2}, {4, 1}},
             new int[][]{{2, 3, 2}, {4, 2, 4}, {3, 1, 4}}
