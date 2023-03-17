@@ -3,6 +3,8 @@ package Programmers.Lv2.Q138476;
 import java.util.*;
 
 public class Hyejin {
+    //0.78ms, 73MB
+    //95.57ms, 93.9MB
     public int solution(int k, int[] tangerine) {
         int answer = 0;
         Map<Integer,Integer> tangerineCount = new HashMap<>();
