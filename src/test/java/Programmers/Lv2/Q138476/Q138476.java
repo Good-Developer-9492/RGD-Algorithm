@@ -1,10 +1,10 @@
-package Programmers.Lv2.Q13876;
+package Programmers.Lv2.Q138476;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class Q13876 {
+public class Q138476 {
     public static List<Integer> input() {
         return asList(
             6, 4, 2
