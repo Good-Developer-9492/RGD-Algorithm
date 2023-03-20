@@ -1,4 +1,4 @@
-package Programmers.Lv2.Q42747;
+package Programmers.Lv2.Q76502;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,8 +8,8 @@ class HyejinTest {
 
     @Test
     void solution() {
-        var input = Q42747.input();
-        var output = Q42747.output();
+        var input = Q76502.input();
+        var output = Q76502.output();
 
         var algorithm = new Hyejin();
 
