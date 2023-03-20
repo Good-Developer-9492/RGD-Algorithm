@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class HyunhoTest {
     @Test
     void solution(){
-        var input = Q42747.input2();
+        var input = Q42747.input();
         var output = Q42747.output();
 
         var algorithm = new Hyunho();
