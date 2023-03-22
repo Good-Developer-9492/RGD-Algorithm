@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HyejinTest {
     @Test
     void solution() {
-        var input1 = Q12949.input();
+        var input1 = Q12949.input1();
         var input2 = Q12949.input2();
         var output = Q12949.output();
 
