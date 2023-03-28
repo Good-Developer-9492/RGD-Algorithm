@@ -1,4 +1,4 @@
-package Programmers.Lv2;
+package Programmers.Lv2.Q17677;
 
 import org.junit.jupiter.params.provider.Arguments;
 
