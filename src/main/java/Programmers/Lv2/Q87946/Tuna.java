@@ -15,8 +15,6 @@ public class Tuna {
     }
 
     private int getMaxAdventureCount(int k, int[][] dungeons) {
-        int answer = 1;
-
         int recursiveCount = 0;
         for (int i = 0; i < dungeons.length; i++) {
             if (check[i] || dungeons[i][0] > k) continue;
@@ -25,6 +23,6 @@ public class Tuna {
             check[i] = false;
         }
 
-        return answer + recursiveCount;
+        return recursiveCount + 1;
     }
 }
