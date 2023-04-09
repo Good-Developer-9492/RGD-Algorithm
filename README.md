@@ -18,6 +18,8 @@ Real Good Developer's Algorithm Study Repo
   * Lv의 모든 문제를 풀이했을 시, 동일 레벨의 [스킬 체크] 진행
   * 프로그래머스의 연습문제를 전부 풀이했을 경우 코딩테스트 역량 시험 진행
   * 프로그래머스의 과정이 마무리되면 백준 강의의 문제들, leetcode 등의 문제들로 추후 선택
+* 1주일마다 번갈아가며 사전 준비 진행
+  * 테스트케이스들을 미리 등록해두는 과정이 필요
 * 테스트 진행
   * 코딩 테스트 사이트에 직접 붙여넣고 성공 테스트
     * **만약 문제에 예시로 나와있지 않은 반례를 발견하면 테스트 코드에 추가 바람**
@@ -29,12 +31,18 @@ Real Good Developer's Algorithm Study Repo
       * `Java Version 17`
         * IntelliJ 설정의 Build -> Compiler -> Java Compiler의 project bytecode version을 17로 변경
 * 1일 1문제 풀이 후 PR 진행
-      * `Java Version 17`
   * 패키지명은 문제번호, 파일명은 이름
   * Branch명은 이름/문제번호
   * 문제번호는 문제 사이트의 URL Path중 가장 마지막 숫자
-    * https://school.programmers.co.kr/learn/courses/30/lessons/138477
+    * `https://school.programmers.co.kr/learn/courses/30/lessons/138477`
     * 위의 링크의 경우 138477이 문제 번호
+  * PR 제목은 다음과 같이 진행 _(PR Title만 보고도 파악하기 쉽도록)_
+    * 현재 풀이중인 경우 - `[WIP] 프로그래머스 12345 - 푸는중`
+    * 도움이 필요한 경우 - `[WIP] 프로그래머스 12345 - 헬프`
+      * 조언을 확인하고 다시 풀고있다면 `푸는중`으로 수정 필요
+    * 문제푼 경우 - `프로그래머스 12345`
+    * 리뷰가 완료된 경우 - `프로그래머스 12345 - 완료`
+      * 완료표시는 마지막 승인자가 제목을 수정
 
 ## 벌금
 
