@@ -1,6 +1,7 @@
 package Programmers.Lv2.Q42584;
 
 public class Tuna {
+    // (0.02ms ~ 17.85ms / 62.3MB ~ 80.4MB)
     public int[] solution(int[] prices) {
         int[] answer = new int[prices.length];
 
