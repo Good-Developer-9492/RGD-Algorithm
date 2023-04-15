@@ -2,6 +2,7 @@ package Programmers.Lv2.Q49993;
 
 public class Hyunho {
 
+    //0.75ms, 78.9MB
     public int solution(String skill, String[] skill_trees) {
         int answer = 0;
         String[] essentialSkill = skill.split("");
