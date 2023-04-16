@@ -35,7 +35,7 @@ public class SecondWeekOfApril {
 
     public static Stream<Arguments> Q49994() {
         return Stream.of(
-            Arguments.arguments("ULURRDLLUU", 7),
+            Arguments.arguments("ULURRDLLU", 7),
             Arguments.arguments("LULLLLLLU", 7)
         );
     }
