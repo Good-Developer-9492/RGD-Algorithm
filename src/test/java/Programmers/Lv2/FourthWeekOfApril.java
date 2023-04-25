@@ -14,7 +14,7 @@ public class FourthWeekOfApril {
 
     public static Stream<Arguments> Q77885() {
         return Stream.of(
-            Arguments.arguments(new int[]{2, 7}, new int[]{3, 11})
+            Arguments.arguments(new long[]{2, 7}, new long[]{3, 11})
         );
     }
 
