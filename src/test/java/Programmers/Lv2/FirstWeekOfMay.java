@@ -1,4 +1,4 @@
-package Programmers.Lv2.Q138476;
+package Programmers.Lv2;
 
 import org.junit.jupiter.params.provider.Arguments;
 
@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-public class firstWeekOfMay {
+public class FirstWeekOfMay {
     //https://school.programmers.co.kr/learn/courses/30/lessons/68936
     public static Stream<Arguments> Q68936() {
         return Stream.of(
