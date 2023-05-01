@@ -47,7 +47,10 @@ public class ThirdWeekOfApril {
     public static Stream<Arguments> Q17679() {
         return Stream.of(
             Arguments.arguments(4, 5, new String[]{"CCBDE", "AAADE", "AAABF", "CCBBF"}, 14),
-            Arguments.arguments(6, 6, new String[]{"TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"}, 15)
+            Arguments.arguments(6, 6, new String[]{"TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"}, 15),
+            Arguments.arguments(4, 5, new String[]{"AAAAA","AUUUA","AUUAA","AAAAA"}, 14),
+            Arguments.arguments(5, 6, new String[] {"AAAAAA", "BBAATB", "BBAATB", "JJJTAA", "JJJTAA"}, 24),
+            Arguments.arguments(6, 6, new String[] {"AABBEE", "AAAEEE", "VAAEEV", "AABBEE", "AACCEE", "VVCCEE"}, 32)
         );
     }
 
