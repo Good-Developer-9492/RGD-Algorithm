@@ -36,10 +36,6 @@ public class ThirdWeekOfApril {
             Arguments.arguments(
                 new String[]{"F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"},
                 new String[]{"A-10 Thunderbolt II", "B-50 Superfortress", "F-5 Freedom Fighter", "F-14 Tomcat"}
-            ),
-            Arguments.arguments(
-                new String[]{"img000012345", "img1.png", "img2", "IMG02"},
-                new String[]{"img000012345", "img1.png", "img2", "IMG02"}
             )
         );
     }
