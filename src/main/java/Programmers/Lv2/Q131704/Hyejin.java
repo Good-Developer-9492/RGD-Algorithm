@@ -1,7 +1,5 @@
 package Programmers.Lv2.Q131704;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 public class Hyejin {
@@ -9,7 +7,6 @@ public class Hyejin {
         int answer = 0;
         Stack<Integer> subContainerBelt = new Stack<>();
 
-        //
         int orderIdx = 0;
 
         //컨테이너벨트
