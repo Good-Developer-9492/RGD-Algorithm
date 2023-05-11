@@ -1,38 +1,54 @@
 package Programmers.Lv2.Q131704;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 public class Hyunho {
-
-    //order 순서데로 넣어야 한다.
     public int solution(int[] order) {
         int answer = 0;
+        ConveyorBelt subConveyorBelt1 = ConveyorBelt.of();
 
-        Queue<Integer> conveyorBelt = new LinkedList<>();
-        Stack<Integer> subConveyorBelt = new Stack<>();
+        int currentBoxNumber = 0;
 
-        // 123
-        // 45
-        // 43125
-
-
-        for (int i = 0; i < order.length; i++) {
-            if (order[i] == i + 1) {
-                answer++;
+        for (int i = 1; i <= order.length; i++) {
+            if (order[currentBoxNumber] != i) {
+                subConveyorBelt1.addBox(i);
                 continue;
             }
 
-            if (!subConveyorBelt.isEmpty() && subConveyorBelt.peek() == i + 1) {
-                subConveyorBelt.pop();
-                answer++;
-                continue;
-            }
+            currentBoxNumber++;
+            answer++;
 
-            subConveyorBelt.push(i);
+            while (subConveyorBelt1.checkOffload(order[currentBoxNumber])) {
+                subConveyorBelt1.offload();
+                currentBoxNumber++;
+                answer++;
+            }
         }
 
         return answer;
+    }
+
+    static class ConveyorBelt {
+        private final Stack<Integer> stack;
+
+        private ConveyorBelt(Stack<Integer> stack) {
+            this.stack = stack;
+        }
+
+        static ConveyorBelt of() {
+            return new ConveyorBelt(new Stack<>());
+        }
+
+        public void addBox(int box) {
+            stack.add(box);
+        }
+
+        public boolean checkOffload(int orderBoxNumber) {
+            return stack.size() > 0 && stack.peek() == orderBoxNumber;
+        }
+
+        public void offload() {
+            stack.pop();
+        }
     }
 }
