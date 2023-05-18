@@ -1,6 +1,7 @@
 package Programmers.Lv2.Q12905;
 
 public class Tuna {
+    // (0.05ms / 75MB)
     public int solution(int[][] board) {
         if (isAllZero(board)) return 0;
         int answer = 1;
