@@ -8,33 +8,26 @@ public class Hyunho {
     //X 1 X 5 X
     //X 2 3 1 X
     //1 X X X 1
-    boolean[][] visited;
     int[] dr = {0, 0, -1, 1};
     int[] dc = {-1, 1, 0, 0};
-    Queue<Point> queue = new LinkedList<>();
-    int w;
-    int h;
-
 
     //["X591X","X1X5X","X231X", "1XXX1"]
     public int[] solution(String[] maps) {
-        int[] answer = {};
         //각 섬에서 최대 며칠씩 머무를 수 있는지 배열에 오름차순으로 담아 return
-        h = maps.length;
-        w = maps[0].length();
-        visited = new boolean[h][w];
-
-        List<Integer> list = new ArrayList<>();
+        MapInfo mapInfo = new MapInfo(maps);
+        VisitHistory visited = new VisitHistory(mapInfo.rowLength(), mapInfo.columnLength());
+        List<Integer> foodSumList = new ArrayList<>();
+        Queue<Point> visitedQueue = new LinkedList<>();
 
         boolean flag = false;
-        for (int i = 0; i < h; i++) {
-            for (int j = 0; j < w; j++) {
-                if (visited[i][j] || maps[i].charAt(j) == 'X') {
+        for (int i = 0; i < mapInfo.rowLength(); i++) {
+            for (int j = 0; j < mapInfo.columnLength(); j++) {
+                if (visited.position(i, j) || mapInfo.verifyEmptyPoint(i, j)) {
                     continue;
                 }
 
                 flag = true;
-                list.add(bfs(i, j, maps));
+                foodSumList.add(bfs(new Point(i, j), mapInfo, visitedQueue, visited));
             }
         }
 
@@ -42,50 +35,112 @@ public class Hyunho {
             return new int[]{-1};
         }
 
-        Collections.sort(list);
+        Collections.sort(foodSumList);
 
-        answer = list.stream().mapToInt(i -> i).toArray();
-
-        return answer;
+        return foodSumList.stream()
+            .mapToInt(i -> i)
+            .toArray();
     }
 
-    public int bfs(int row, int column, String[] maps) {
-        queue.add(new Point(row, column));
-        visited[row][column] = true;
-        int sum = maps[row].charAt(column) - '0';
+    private int bfs(Point currentPoint, MapInfo mapInfo, Queue<Point> visitedQueue, VisitHistory visited) {
+        visitedQueue.add(currentPoint);
+        visited.changeStatusPosition(currentPoint.getRow(), currentPoint.getColumn());
 
-        while (!queue.isEmpty()) {
-            Point point = queue.poll();
+        int sumFoodQuantity = mapInfo.foodQuantityToInteger(currentPoint.row, currentPoint.column);
+
+        while (!visitedQueue.isEmpty()) {
+            Point point = visitedQueue.poll();
 
             for (int i = 0; i < 4; i++) {
-                int nr = point.r + dr[i];
-                int nc = point.c + dc[i];
+                int row = point.getRow() + dr[i];
+                int column = point.getColumn() + dc[i];
 
-                if (nr < 0 || nc < 0 || nr >= h || nc >= w || visited[nr][nc]) {
+                if (mapInfo.checkEndPointAndOutOfBound(row, column, visited.visited)) {
                     continue;
                 }
 
-                if (maps[nr].charAt(nc) == 'X') {
+                if (mapInfo.verifyEmptyPoint(row, column)) {
                     continue;
                 }
 
-                visited[nr][nc] = true;
-                sum += maps[nr].charAt(nc) - '0';
-                queue.add(new Point(nr, nc));
+                visited.changeStatusPosition(row, column);
+                sumFoodQuantity += mapInfo.foodQuantityToInteger(row, column);
+                visitedQueue.add(new Point(row, column));
             }
         }
 
-        return sum;
+        return sumFoodQuantity;
     }
 
 
     static class Point {
-        private final int r;
-        private final int c;
+        private final int row;
+        private final int column;
 
-        public Point(int r, int c) {
-            this.r = r;
-            this.c = c;
+        private Point(int row, int column) {
+            this.row = row;
+            this.column = column;
+        }
+
+        public int getRow() {
+            return row;
+        }
+
+        public int getColumn() {
+            return column;
+        }
+    }
+
+    static class MapInfo {
+        private final String[] maps;
+
+        public MapInfo(String[] maps) {
+            this.maps = maps;
+        }
+
+        public int rowLength() {
+            return this.maps.length;
+        }
+
+        public int columnLength() {
+            return this.maps[0].length();
+        }
+
+        public int foodQuantityToInteger(int row, int column) {
+            return this.maps[row].charAt(column) - '0';
+        }
+
+        public boolean verifyEmptyPoint(int row, int column) {
+            return this.maps[row].charAt(column) == 'X';
+        }
+
+
+        public boolean checkEndPointAndOutOfBound(int row, int column, boolean[][] visited) {
+            return row < 0 ||
+                column < 0 ||
+                row >= this.rowLength() ||
+                column >= this.columnLength() ||
+                visited[row][column];
+        }
+    }
+
+    static class VisitHistory {
+        private final boolean[][] visited;
+
+        public VisitHistory(int rowLength, int columnLength) {
+            this(new boolean[rowLength][columnLength]);
+        }
+
+        public VisitHistory(boolean[][] visited) {
+            this.visited = visited;
+        }
+
+        public boolean position(int low, int colum) {
+            return this.visited[low][colum];
+        }
+
+        public void changeStatusPosition(int row, int column) {
+            this.visited[row][column] = true;
         }
     }
 }
