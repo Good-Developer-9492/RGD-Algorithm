@@ -18,29 +18,41 @@ Real Good Developer's Algorithm Study Repo
 
 ## 진행 방식
 
-* 가능한 만큼 문제를 풀고 **주에 1번씩 주말에 PR 진행** (최소 1주 3문제)
-  * 패키지명은 문제번호, 파일명은 이름
-  * Branch명은 `닉네임/{월}-{주}` (ex. tuna/5-1)
+* 1주에 3문제 이상 풀이 후 PR 진행
+* 해당 주 주말에 PR 리뷰 진행
+
+### Commit 진행 방식
+
+* 패키지명은 문제번호, 파일명은 이름
+* Branch명은 `닉네임/문제번호` (ex. tuna/138477)
   * 문제번호는 문제 사이트의 URL Path중 가장 마지막 숫자
     * `https://school.programmers.co.kr/learn/courses/30/lessons/138477`
-    * 위의 링크의 경우 138477이 문제 번호
-  * PR 제목은 다음과 같이 진행 _(PR Title만 보고도 파악하기 쉽도록)_
-    * `5월 3주차 / 6문제` 와 같은 형태로 언제 몇문제를 풀었는지 작성
-    * 리뷰가 완료된 경우 - `프로그래머스 12345 - 완료`
-      * 완료표시는 마지막 승인자가 제목을 수정
-  * PR 내용을 다음의 내용이 포함되는 것을 권장
-    * 어떤 문제를 풀었는지 링크
-    * 어떤 문제를 풀었고, 어떤 문제에 도움이 필요하고 등등 주에 진행한 내용 작성
-* 테스트 진행
-  * 코딩 테스트 사이트에 직접 붙여넣고 성공 테스트
-    * **만약 문제에 예시로 나와있지 않은 반례를 발견하면 테스트 코드에 추가 바람**
-  * IntelliJ IDEA에서 JUnit을 활용한 테스트 진행
-    * 문제에 나온 Input, Output을 입력하고 객체 변경후 JUnit을 활용한 테스트 진행
-    * 테스트 실패할 경우
-      * `Execution failed for task ':test'. > No tests found for given includes`
-        * IntelliJ 설정에서 Build -> Build Tools -> Gradle의 Build and Run 설정을 Gradle에서 IntelliJ로 수정
-      * `Java Version 17`
-        * IntelliJ 설정의 Build -> Compiler -> Java Compiler의 project bytecode version을 17로 변경
+    * 위의 링크의 경우 138477이 문제 번호 
+
+### PR 진행 방식
+가능한 만큼 문제를 풀고 해당 문제에 대한 PR 진행
+
+* PR 제목은 다음과 같이 진행 _(PR Title만 보고도 파악하기 쉽도록)_
+  * 현재 풀이중인 경우 - `[WIP] 프로그래머스 12345 - 푸는중`
+  * 도움이 필요한 경우 - `[WIP] 프로그래머스 12345 - 헬프`
+    * 조언을 확인하고 다시 풀고있다면 `푸는중`으로 수정 필요
+  * 문제푼 경우 - `프로그래머스 12345`
+  * 리뷰가 완료된 경우 - `프로그래머스 12345 - 완료`
+    * 완료표시는 마지막 승인자가 제목을 수정
+* PR 내용을 다음의 내용이 포함되는 것을 권장
+  * 어떤 문제를 풀었는지 링크
+  * 어떤 문제를 풀었고, 어떤 문제에 도움이 필요하고 등등 주에 진행한 내용 작성
+
+### 테스트 진행 방식
+* 코딩 테스트 사이트에 직접 붙여넣고 성공 테스트
+  * **만약 문제에 예시로 나와있지 않은 반례를 발견하면 테스트 코드에 추가 바람**
+* IntelliJ IDEA에서 JUnit을 활용한 테스트 진행
+  * 문제에 나온 Input, Output을 입력하고 객체 변경후 JUnit을 활용한 테스트 진행
+  * 테스트 실패할 경우
+    * `Execution failed for task ':test'. > No tests found for given includes`
+      * IntelliJ 설정에서 Build -> Build Tools -> Gradle의 Build and Run 설정을 Gradle에서 IntelliJ로 수정
+    * `Java Version 17`
+      * IntelliJ 설정의 Build -> Compiler -> Java Compiler의 project bytecode version을 17로 변경
 
 [프로그래머스 코딩테스트 연습 Lv.1]: https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&levels=1&page=1&languages=java
 [프로그래머스 코딩테스트 연습 Lv.2]: https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&levels=2&page=1&languages=java
