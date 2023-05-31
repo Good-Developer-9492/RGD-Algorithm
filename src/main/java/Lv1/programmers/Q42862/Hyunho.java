@@ -1,50 +1,78 @@
 package Lv1.programmers.Q42862;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class Hyunho {
+    /**
+     * 1. 체육복을 도난당한 학생은 0으로 변경
+     * 2. 여벌이 있는 학생은 2로 변경
+     * 3. for문을 돌면서 체육복이 없을 경우 좌우 학생을 비교하여 여벌이 있을 경우 1로 변경
+     */
+    //2.01ms, 67.5MB
     public int solution(int n, int[] lost, int[] reserve) {
-        int answer = 0;
-        Queue<Integer> reserveQueue = new LinkedList<>();
+        Student student = new Student(n);
+        student.initialize();
 
-        Arrays.sort(lost);
-        Arrays.sort(reserve);
+        for (int l : lost) {
+            student.decrease(l);
+        }
 
-        int tempIdx = 0;
-        for (int i = 0; i < lost.length; i++) {
-            for (int j = tempIdx; j < reserve.length; j++) {
-                if (lost[i] == reserve[j]) {
-                    lost[i] = -1;
-                    reserve[j] = -1;
-                    tempIdx = j;
-                    break;
-                }
+        for (int r : reserve) {
+            student.increase(r);
+        }
+
+        for (int i = 0; i < n; i++) {
+            student.verifyAvailableForRent(i);
+        }
+
+        return (int) student.studentsEligibleToParticipate();
+    }
+
+    private static class Student {
+        private final int[] array;
+
+        public Student(int size) {
+            this(new int[size]);
+        }
+
+        public Student(int[] array) {
+            this.array = array;
+        }
+
+        public int size() {
+            return array.length;
+        }
+
+        public void initialize() {
+            for (int i = 0; i < size(); i++) {
+                this.array[i]++;
             }
         }
 
-        for (int r : reserve){
-            if (r != -1)
-                reserveQueue.add(r);
+        public void decrease(int lost) {
+            this.array[lost - 1]--;
         }
 
-        for (int i = 0; i < lost.length; i++) {
-            if (lost[i] == -1) {
-                answer++;
-                continue;
+        public void increase(int reserve) {
+            this.array[reserve - 1]++;
+        }
+
+        public void verifyAvailableForRent(int index) {
+            if (index - 1 >= 0 && this.array[index - 1] == 0 && this.array[index] >= 2) {
+                this.array[index - 1]++;
+                this.array[index]--;
             }
-            for (int j = 0; j < reserveQueue.size(); j++) {
-                if (lost[i] -1 == reserveQueue.peek() || lost[i] +1 == reserveQueue.peek()){
-                    reserveQueue.remove();
-                    answer++;
-                    break;
-                }else if (lost[i] > reserveQueue.peek()){
-                    reserveQueue.remove();
-                }
+
+            if (index + 1 < this.size() && this.array[index + 1] == 0 && this.array[index] >= 2) {
+                this.array[index + 1]++;
+                this.array[index]--;
             }
         }
 
-        answer += n - lost.length;
-
-        return answer;
+        public long studentsEligibleToParticipate() {
+            return Arrays.stream(this.array)
+                .filter(s -> s >= 1)
+                .count();
+        }
     }
 }

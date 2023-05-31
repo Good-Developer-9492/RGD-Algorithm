@@ -16,7 +16,6 @@ class HyunhoTest {
 
 
         for (int i = 0; i < output.size(); i++) {
-            System.out.println("i ================ "+i);
             assertEquals(output.get(i), algorithm.solution(input1.get(i), input2.get(i), input3.get(i)));
         }
     }
