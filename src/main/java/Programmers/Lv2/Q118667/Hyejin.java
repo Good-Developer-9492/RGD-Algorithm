@@ -8,49 +8,39 @@ public class Hyejin {
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
 
-        int goal = 0;
-        int q1Total = 0;
-        for (int i = 0; i < queue1.length; i++) {
-            q1.add(queue1[i]);
-            q2.add(queue2[i]);
-
-            //모든 큐의 합
-            goal += queue1[i];
-            goal += queue2[i];
-
-            //q1의 합
-            q1Total += queue1[i];
+        long q1Sum = 0;
+        for (int q : queue1) {
+            q1.add(q);
+            q1Sum += q;
         }
 
-        //목표는 큐의 합의 반
-        goal /= 2;
-        //최대길이는 queue*3보다 작다
-        int limit = q1.size() * 3;
+        long q2Sum = 0;
+        for (int q : queue2) {
+            q2.add(q);
+            q2Sum += q;
+        }
 
-        //q1이 절반 값이 될 때까지
-        while (q1Total != goal) {
-            //같은 값을 못만드는 경우
-            if (limit == 0) return -1;
+        int answer = 0;
+        while (q1Sum != q2Sum) {
 
-            //연산
-            limit--;
-
-            //q1이 더 큰 경우에는 q1의 값을 뺀다
-            if (q1Total > goal) {
-                int tmp = q1.poll();
-                q1Total -= tmp;
-                q2.add(tmp);
-                continue;
+            if (q1Sum > q2Sum) {
+                int q = q1.poll();
+                q1Sum -= q;
+                q2Sum += q;
+                q2.add(q);
+            } else {
+                int q = q2.poll();
+                q2Sum -= q;
+                q1Sum += q;
+                q1.add(q);
             }
-            //q1이 작은경우 q2의 값을 넣는다
 
-            int tmp = q2.poll();
-            q1Total += tmp;
-            q1.add(tmp);
+            answer++;
+
+            if (answer > queue1.length * 3) return -1;
 
         }
+        return answer;
 
-        //연산횟수
-        return queue1.length * 3 - limit;
     }
 }
