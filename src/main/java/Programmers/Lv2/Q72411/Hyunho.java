@@ -5,7 +5,7 @@ public class Hyunho {
         String[] answer = {};
 
         //어려움............
-        //test
+
 
         return answer;
     }
